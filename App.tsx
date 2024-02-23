@@ -1,19 +1,17 @@
-import { View } from 'react-native';
-import Home from './src/presentation/screens/home';
+import { NavigationContainer } from '@react-navigation/native';
+import { AuthProvider } from './src/presentation/context/AuthContext';
+import AppNavigator from './src/presentation/navigation/AppNavigation';
+import 'react-native-gesture-handler';
+import { FontLoader } from './src/assets/fonts/fontLoader';
 
 export default function App() {
     return (
-        <View>
-            <Home />
-        </View>
+        <FontLoader>
+            <NavigationContainer independent={true}>
+                <AuthProvider>
+                    <AppNavigator />
+                </AuthProvider>
+            </NavigationContainer>
+        </FontLoader>
     );
-}
-
-// const styles = StyleSheet.create({
-// 	container: {
-// 		flex: 1,
-// 		backgroundColor: '#fff',
-// 		alignItems: 'center',
-// 		justifyContent: 'center',
-// 	},
-// });
+};
