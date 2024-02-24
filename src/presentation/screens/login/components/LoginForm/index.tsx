@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ButtonForm from '../../ButtonForm';
+import ButtonForm from '../../../../components/ButtonForm';
 import loginFormStyle from './style';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 

@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
+import homeStyles from './styles';
+import HeaderHome from './components/headerHome';
+import SearchHome from './components/searchHome';
 
 const Home = () => {
     return (
-      <View>
-        <Text>Home</Text>
-      </View>
+      <ScrollView>
+        <HeaderHome/>
+        <SearchHome/>
+      </ScrollView>
     );
 };
 

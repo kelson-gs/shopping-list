@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
-import LoginForm from '../../components/loginComponentes/LoginForm';
-import LoginHeader from '../../components/loginComponentes/LoginHeader';
+import LoginForm from './components/LoginForm';
+import LoginHeader from './components/LoginHeader';
 import { LinearGradient } from 'expo-linear-gradient';
 import loginStyles from './styles';
 

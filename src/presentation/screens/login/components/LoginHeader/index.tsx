@@ -1,5 +1,5 @@
 import {View, Text} from 'react-native';
-import CarBuy from '../../../../assets/icons_svg';
+import CarBuy from '../../../../../assets/icons_svg/carBuy';
 import loginHeadStyle from './style';
 
 const LoginHeader = () => {
