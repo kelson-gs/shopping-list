@@ -1,22 +1,32 @@
-import { View, Text } from 'react-native';
-import LoginForm from '../../components/loginComponentes/LoginForm';
-import LoginHeader from '../../components/loginComponentes/LoginHeader';
-import { LinearGradient } from 'expo-linear-gradient';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import loginStyles from './styles';
+import Screen from '../../components/Screen';
 
 const Login = () => {
     return (
-        <LinearGradient 
-            style={loginStyles.container}  
-            colors={["rgba(27, 160, 96, 0.69)","rgba(70, 222, 149, 0.87)"]} 
-            start={{x:1.5, y:0}} 
-            end={{x:0 , y:1}}
-        >
-            <View>
-                <LoginHeader/>
-                <LoginForm />
+        <Screen>
+            <View style={loginStyles.container}>
+                <Image
+                    style={loginStyles.image}
+                    source={require('../../../assets/images/capa_home.png')}
+                    alt='imagem_background'
+                    resizeMode='contain'
+                />
             </View>
-        </LinearGradient>
+
+            <Text style={loginStyles.title}>
+                Shopping List
+            </Text>
+            <Text style={loginStyles.subtitle}>
+                Faça login para transformar suas idas ao merdao em uma experiência mais fácil e organizada!
+            </Text>
+
+            <TouchableOpacity style={loginStyles.button}>
+                <Text style={loginStyles.buttonText}>
+                    Acessar minha conta
+                </Text>
+            </TouchableOpacity>
+        </Screen>
     );
 };
 
